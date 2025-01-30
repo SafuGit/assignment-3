@@ -4,27 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+    .sora-font {
+      font-family: "Sora", serif;
+      font-optical-sizing: auto;
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
 </head>
-<body>
+<body class="sora-font">
   <header>
     <nav>
-      <div class="flex justify-around">
-        <div class="flex">
-          <div>
+      <div class="flex justify-around items-center bg-[#FFF9F4] h-[100px]">
+        <div class="flex items-center">
+          <div class="mr-[12px]">
             <img src="./c1-assets/logo-header.png" alt="">
           </div>
-          <h1>Browse<span>4</span>Pets</h1>
+          <h1 class="text-xl">Browse<span class="text-[#FFDC26]">4</span>Pets</h1>
         </div>
-        <div class="flex">
+        <div class="flex gap-[28px] text-lg">
           <div>Find a pet</div>
           <div>Breeds</div>
           <div >Contact us</div>
         </div>
         <div>
-          <i class="fa-regular fa-bell"></i>
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <button>Login</button>
-          <button>Register</button>
+          <i class="fa-regular fa-bell mr-4 fa-xl"></i>
+          <i class="fa-solid fa-magnifying-glass mr-4 fa-xl"></i>
+          <button class="mr-3 rounded-md border border-[#FFDC26] p-2 w-24">Login</button>
+          <button class="w-28 rounded-md bg-[#FFDC26] p-2">Register</button>
         </div>
       </div>
     </nav>
