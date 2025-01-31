@@ -4,40 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
-    .sora-font {
-      font-family: "Sora", serif;
-      font-optical-sizing: auto;
-      font-weight: normal;
-      font-style: normal;
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {},
+        fontFamily: {
+          'sora-font': ['Sora', 'sans-serif'],
+          'adlam': ['ADLaM Display', 'serif']
+        },
+      },
     }
-  </style>
+  </script>
+
+  <!-- <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+  </style> -->
 </head>
-<body class="sora-font">
+<body class="font-sora-font">
   <header>
     <nav>
-      <div class="flex justify-around items-center bg-[#FFF9F4] h-[100px]">
+      <div class="flex md:justify-around justify-between items-center bg-[#FFF9F4] h-[100px]">
         <div class="flex items-center">
-          <div class="mr-[12px]">
+          <div class="md:mr-[12px] ml-4">
             <img src="./c1-assets/logo-header.png" alt="">
           </div>
-          <h1 class="text-xl">Browse<span class="text-[#FFDC26]">4</span>Pets</h1>
+          <h1 class="lg:text-xl md:text-lg hidden md:block lg:block">Browse<span class="text-[#FFDC26]">4</span>Pets</h1>
         </div>
-        <div class="flex gap-[28px] text-lg">
+        <div class="lg:flex md:flex hidden lg:gap-[28px] text-md md:gap-[20px]">
           <div>Find a pet</div>
           <div>Breeds</div>
           <div >Contact us</div>
         </div>
-        <div>
+        <div class="lg:block md:block hidden">
           <i class="fa-regular fa-bell mr-4 fa-xl"></i>
           <i class="fa-solid fa-magnifying-glass mr-4 fa-xl"></i>
           <button class="mr-3 rounded-md border border-[#FFDC26] p-2 w-24">Login</button>
           <button class="w-28 rounded-md bg-[#FFDC26] p-2">Register</button>
         </div>
+
+        <div class="block md:hidden mr-4">
+          <i class="fa-solid fa-bars fa-2xl"></i>
+        </div>
       </div>
+      <hr class="md:hidden border-[#111111]">
     </nav>
+    <!-- *Hero Section -->
+    <section class="mt-20">
+      <div class="flex flex-col w-4/5 mx-auto">
+        <div class="w-3/5 z-10">
+          <h1 class="font-adlam text-6xl mb-[16px]">Pamper Your Pet, <br> Because They Deserve <br> the Best</h1>
+          <p class="text-sm text-gray-600 mb-[24px]">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+          <button class="rounded-md bg-[#FFDC26] p-2 w-36">Find a Pet</button>
+        </div>
+        <img class="relative lg:bottom-[340px] md:bottom-[240px] sm:bottom-[190px] z-0" src="./c1-assets/cat-big.png" alt="">
+      </div>
+    </section>
   </header>
 
   <script src="https://kit.fontawesome.com/791c82d1b4.js" crossorigin="anonymous"></script>
