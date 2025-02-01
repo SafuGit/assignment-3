@@ -20,6 +20,31 @@
           'sora-font': ['Sora', 'sans-serif'],
           'adlam': ['ADLaM Display', 'serif']
         },
+        animation: {
+          'text-anim': 'text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite'
+        },
+        keyframes: {
+          'text-slide': {
+            '0%, 16%': {
+              transform: 'translateY(0%)',
+            },
+            '20%, 36%': {
+              transform: 'translateY(-20%)',
+            },
+            '40%, 56%': {
+              transform: 'translateY(-40%)',
+            },
+            '60%, 76%': {
+              transform: 'translateY(-60%)',
+            },
+            '80%, 96%': {
+              transform: 'translateY(-80%)',
+            },
+            '100%': {
+              transform: 'translateY(-100%)',
+            },
+          }
+        }
       },
     }
   </script>
@@ -60,7 +85,16 @@
     <section class="mt-20 mb-20">
       <div class="flex flex-col w-4/5 mx-auto">
         <div class="sm:w-3/5 z-10">
-          <h1 class="font-adlam lg:text-6xl text-3xl mb-[16px]">Pamper Your Pet, <br> Because They Deserve <br> the Best</h1>
+          <h1 class="font-adlam lg:text-6xl text-3xl mb-[16px]">Pamper Your Pet, <br> Because They Deserve <br> <div class="h-[2.25rem] lg:h-[3.75rem] overflow-hidden">
+            <ul class="animate-text-anim overflow-hidden">
+                <li>The Best Treats</li>
+                <li>The Most Love</li>
+                <li>The Shiniest Toys</li>
+                <li>The Finest Accesories</li>
+                <li>The Best Treats</li>
+              </ul>
+          </div>
+          </h1>
           <p class="text-sm text-gray-600 mb-[24px]">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
           <button class="rounded-md bg-[#FFDC26] p-2 w-36">Find a Pet</button>
         </div>
@@ -323,11 +357,11 @@
           <div class="flex flex-col md:flex-row md:justify-around w-[100vw] md:items-end items-start justify-end ml-4 md:ml-0">
             <div class="md:w-[25%] md:mb-20 mb-6">
               <div class="flex items-center">
-                <img class="mr-2" src="./c1-assets/logo-footer.png" alt="">
+                <img class="mr-2 mb-4" src="./c1-assets/logo-footer.png" alt="">
                 <h1 class="lg:text-xl md:text-lg md:block lg:block">Browse<span class="text-[#FFDC26]">4</span>Pets</h1>
               </div>
               <div>
-                <p>Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+                <p class="text-gray-700">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
               </div>
             </div>
             <div class="md:mb-20 mb-6">
